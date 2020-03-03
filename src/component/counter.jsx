@@ -3,9 +3,11 @@ class Counter  extends Component {
     state={
         count:0,
     };
-    handleIncreament()
+    handleIncreament=()=>
     {
-        console.log("Increament clicked");
+        this.setState({count:this.state.count+1})
+
+
     }
     render() { 
         return( 
