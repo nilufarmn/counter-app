@@ -18,11 +18,17 @@ class Counters extends Component {
 const counters = this.state.counters.map(c => {c.value=0;return c;});
 this.setState({counters});
     };
+    handleIncreament = counter =>{
+console.log(counter);
+
+    };
     render() { 
         return (
         <div>
-            <button className="btn btn-primary btn-sm m-2" onClick={this.handleReset} > Reset</button>
-{this.state.counters.map(counter =>(<Counter onDelete={this.handleDelete} key={counter.id} counter={counter}/>
+            
+<button className="btn btn-primary btn-sm m-2" onClick={this.handleReset} > Reset</button>
+
+{this.state.counters.map(counter =>(<Counter onDelete={this.handleDelete} onIncrement={this.handleIncreament} key={counter.id} counter={counter}/>
 ))}
         </div>  );
     }
