@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class Counter  extends Component {
     render() { 
     return( 
@@ -20,8 +19,8 @@ class Counter  extends Component {
 
     formatCount(){
 
-    const {count}=this.props.counter;
-        return count === 0 ? "Zero" : count;
+    const {value}=this.props.counter;
+        return value === 0 ? "Zero" : value;
 
     }
 }

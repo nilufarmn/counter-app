@@ -18,9 +18,12 @@ class Counters extends Component {
 const counters = this.state.counters.map(c => {c.value=0;return c;});
 this.setState({counters});
     };
-    handleIncreament = counter =>{
-console.log(counter);
-
+    handleIncreament = counter => {
+        const counters=[... this.state.counters];
+        const index=counters.indexOf(counter)
+counters[index]={...counter};
+counters[index].value++;
+this.setState({counters});
     };
     render() { 
         return (
